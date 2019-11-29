@@ -30,7 +30,7 @@ public class HybridOne {
 		desiredCaps.setCapability(MobileCapabilityType.DEVICE_NAME, "Redmi");
 		desiredCaps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.1.2");
 		
-		driver = new AndroidDriver<WebElement>(new URL("http://10.0.0.4:4723/wd/hub"), desiredCaps);
+		driver = new AndroidDriver<>(new URL("http://10.0.0.4:4723/wd/hub"), desiredCaps);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		Thread.sleep(10000);

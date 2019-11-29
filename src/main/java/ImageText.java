@@ -14,7 +14,7 @@ public class ImageText {
 		File textImage  = new File("C:\\Users\\Krishna Singh\\Desktop\\img.png");
 		
 		ITesseract tess = new Tesseract();
-		tess.setDatapath("C:\\Users\\Krishna Singh\\Documents\\evernote backup\\Appium\\ImageToTextData");
+		tess.setDatapath("F:\\Personal\\Locker\\evernote backup\\Study_Documents\\Topics\\Appium\\ImageToTextData");
 		tess.setLanguage("eng");
 		
 		String textFromImage = null;

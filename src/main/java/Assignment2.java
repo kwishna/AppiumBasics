@@ -32,22 +32,18 @@ public class Assignment2 {
 
 			list.add(line);
 
-			data = list.stream().map(p->p.toUpperCase()).collect(Collectors.toList());
+			data = list.stream().map(String::toUpperCase).collect(Collectors.toList());
 
 			for(String t : list) {
 
                String s = new StringBuffer(t).reverse().toString();
-
                System.out.println(s);
- 
 			}
 
 			line = br.readLine();
-
 		}
 
 		br.close();
-
 	}
 	
 	
@@ -60,12 +56,12 @@ public class Assignment2 {
 		}
 		
 		List<String> allLines = Files.readAllLines(Paths.get(f.getAbsolutePath()));
-		allLines.stream().map(str->str.toUpperCase()).forEach(s->System.out.println(s));
+		allLines.stream().map(String::toUpperCase).forEach(System.out::println);
 
 	}
 	
 	
-	public void reversee(File f) throws IOException {
+	private void reversee(File f) throws IOException {
 		
 		if(f.isDirectory() || !f.getName().endsWith("txt")) {
 		
@@ -73,7 +69,7 @@ public class Assignment2 {
 		}
 		
 		List<String> allLines = Files.readAllLines(Paths.get(f.getAbsolutePath()));
-		allLines.stream().map(str->new StringBuffer(str).reverse()).forEach(s->System.out.println(s));
+		allLines.stream().map(str->new StringBuffer(str).reverse()).forEach(System.out::println);
 
 	}
 
